@@ -7,7 +7,9 @@ import { Btn1 } from "../moleculas/Btn1";
 import { Footer } from "../organismos/Footer";
 import { Lottieanimation } from "../atomos/LottieAnimation";
 import dent from "../../assets/images/Maps Ciudad Inteligente.json";
+import { useAuthStore } from "../../store/AuthStore";
 export const LoginTemplate = () => {
+  const { loginGoogle, logoutGoogle } = useAuthStore();
   return (
     <Container>
       <Card>
@@ -32,6 +34,15 @@ export const LoginTemplate = () => {
           color="#fff"
           icono={v.iconogoogle.name}
           iconoPack={v.iconogoogle.pack}
+          funcion={loginGoogle}
+        />
+        <Btn1
+          border="2px"
+          titulo="salir"
+          color="#fff"
+          icono={v.iconogoogle.name}
+          iconoPack={v.iconogoogle.pack}
+          funcion={logoutGoogle}
         />
       </Card>
       <Footer></Footer>
