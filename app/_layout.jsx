@@ -17,6 +17,10 @@ export default function Layout() {
               name="index"
               options={{ headerShown: false }}
             ></Stack.Screen>
+            <Stack.Screen
+              name="Home"
+              options={{ headerShown: false }}
+            ></Stack.Screen>
           </Stack>
         </ThemeProvider>
     </QueryClientProvider>

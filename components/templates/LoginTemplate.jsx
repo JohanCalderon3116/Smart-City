@@ -8,6 +8,7 @@ import { Footer } from "../organismos/Footer";
 import { Lottieanimation } from "../atomos/LottieAnimation";
 import dent from "../../assets/images/Maps Ciudad Inteligente.json";
 import { useAuthStore } from "../../store/AuthStore";
+import { router } from "expo-router";
 export const LoginTemplate = () => {
   const { loginGoogle, logoutGoogle } = useAuthStore();
   return (
@@ -34,15 +35,10 @@ export const LoginTemplate = () => {
           color="#fff"
           icono={v.iconogoogle.name}
           iconoPack={v.iconogoogle.pack}
-          funcion={loginGoogle}
-        />
-        <Btn1
-          border="2px"
-          titulo="salir"
-          color="#fff"
-          icono={v.iconogoogle.name}
-          iconoPack={v.iconogoogle.pack}
-          funcion={logoutGoogle}
+          funcion={async () => {
+            await loginGoogle();
+            router.push("/Home");
+          }}
         />
       </Card>
       <Footer></Footer>

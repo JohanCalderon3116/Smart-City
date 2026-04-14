@@ -14,10 +14,12 @@ export function Btn1({
   height,
   icono,
   iconoPack,
+  onPress,
 }) {
   const handlePress = () => {
     if (url) Linking.openURL(url);
     if (funcion) funcion();
+    if (onPress) onPress();
   };
   const IconoPack = iconoPack;
   return (
