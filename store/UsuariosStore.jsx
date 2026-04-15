@@ -8,8 +8,7 @@ import {
 export const useUsuariosStore = create((set) => ({
   datausuarios: [],
   mostrarusuarios: async () => {
-    const idauth = await ObtenerIdAuthSupabase();
-    const response = await MostrarUsuarios({ id_auth: idauth });
+    const response = await MostrarUsuarios({id_auth: "580d71a9-4589-4d53-9eaf-39ba217e3e2c"});
     set({ datausuarios: response });
     return response;
   },

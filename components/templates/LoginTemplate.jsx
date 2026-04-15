@@ -37,7 +37,7 @@ export const LoginTemplate = () => {
           iconoPack={v.iconogoogle.pack}
           funcion={async () => {
             await loginGoogle();
-            router.push("/Home");
+            router.push("/(map)");
           }}
         />
       </Card>
@@ -46,7 +46,6 @@ export const LoginTemplate = () => {
   );
 };
 
-// Estilos adaptados
 const Container = styled.View`
   position: relative;
   flex: 1;

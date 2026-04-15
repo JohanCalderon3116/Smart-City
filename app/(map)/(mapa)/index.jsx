@@ -1,8 +1,8 @@
 import styled from "styled-components/native";
-export function HomeTemplate() {
+export default function Index() {
   return (
     <Container>
-      <Texto>Componente</Texto>
+      <Texto>Componente mapaaaa</Texto>
     </Container>
   );
 }
@@ -10,8 +10,5 @@ const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.bg};
 `;
-const Texto = styled.Text`
-  color: ${({ theme }) => theme.color3};
-`;
+const Texto = styled.Text``;

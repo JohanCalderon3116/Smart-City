@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import "react-native-reanimated";
-import { useThemeStore } from "../store/ThemeStore";
+import { useThemeStore } from "../../../store/ThemeStore";
 import { ThemeProvider } from "styled-components/native";
 
 export default function Layout() {
@@ -15,10 +15,6 @@ export default function Layout() {
           <Stack>
             <Stack.Screen
               name="index"
-              options={{ headerShown: false }}
-            ></Stack.Screen>
-            <Stack.Screen
-              name="(map)"
               options={{ headerShown: false }}
             ></Stack.Screen>
           </Stack>
